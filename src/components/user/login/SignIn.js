@@ -13,8 +13,10 @@ const LoginContainer = styled.div`
 // ----------------------------------------------------------------------------------
 
 const LoginSection = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   display: ;
   margin: auto;
   margin-top: 300px;
