@@ -85,6 +85,8 @@ const HomeSectionB = styled.div`
   display: block;
   width: 1080px;
   min-height: 500px;
+    transform: scale(0.85);
+  }
 `;
 const HomeSectionC = styled.div`
   top: 50px;
@@ -157,9 +159,7 @@ function AdminHome() {
           <h1>{getHomeTitle()}</h1>
         </HomeTitle>
       </HomeSectionA>
-      <HomeSectionB>
-        <div>{data[selectedIndex].content}</div>
-      </HomeSectionB>
+      <HomeSectionB>{data[selectedIndex].content}</HomeSectionB>
       <HomeSectionC>{data[selectedIndex].button}</HomeSectionC>
     </HomeContainer>
   );
