@@ -110,10 +110,13 @@ align-items: center;
 width: 460px;
   height: 60px;
     background:#111111 ;
-     color: #ffffff;
+     
       font-weight: medium ;
     font-size: 20px;
   }
+    a{
+    color: #ffffff;
+    }
 `;
 const SignupButton = styled.div`
  float: left;
@@ -129,6 +132,9 @@ width: 460px;
       font-weight: medium ;
     font-size: 20px;
   }
+    a{
+    color: #ffffff;
+    }
 `;
 
 function SignIn() {
@@ -153,8 +159,12 @@ function SignIn() {
               <h6>비밀번호찾기 </h6>
             </Link>
           </PwFind>
-          <LoginButton to="/signIn">로그인</LoginButton>
-          <SignupButton to="/signup">회원가입</SignupButton>
+          <LoginButton>
+            <Link to="">로그인</Link>
+          </LoginButton>
+          <SignupButton>
+            <Link to="/signup">회원가입</Link>
+          </SignupButton>
         </InputBox>
       </LoginSection>
     </LoginContainer>
