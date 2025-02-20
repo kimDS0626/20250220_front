@@ -5,148 +5,142 @@ import styled from "styled-components";
 import logo from "./imgs/logo_b.png";
 
 const LoginContainer = styled.div`
-  height: 100%;
+  width: 1920px;
+  height: 1040px;
+  margin: auto;
 `;
 
 // ----------------------------------------------------------------------------------
 
-const LoginSectionA = styled.div`
-  position: relative;
-  width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  box-sizing: border-box;
-  padding-bottom: 50px;
-
-  img {
-    display: inline-block;
-    margin-top: 108px;
-    vertical-align: top;
-    background-position: 0 -51px;
-    background-repeat: no-repeat;
-    width: 260px;
-    height: 65px;
-  }
-`;
-
-const LoginSectionB = styled.div`
+const LoginSection = styled.div`
+  align-items: center;
   justify-content: center;
-  text-align: center;
-  display: block;
-  unicode-bidi: isolate;
-`;
-const LoginInput = styled.div`
-  width: 500px;
+  display: ;
   margin: auto;
-  box-sizing: border-box;
-  input {
-    color: #111111;
-    background: transparent;
-    width: 200px;
-    padding: 20px;
+  margin-top: 300px;
+  position: relative;
+  width: 500px;
+  height: 740px;
 
-    border: none;
-    border-bottom: 1px solid #111111;
-    border-radius: 3px;
-    position: relative;
-    left: 50px;
-    display: block;
-    width: 350px;
-    height: 22px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: -0.2px;
-    z-index: 5;
+  text-align: center;
+  background: #f4f4f4;
+  img {
+    margin-top: 30px;
+    width: 424px;
+    height: 120px;
+    margin-bottom: 30px;
   }
 `;
-const FindBox = styled.div`
+
+const LoginTitle = styled.div`
   width: 500px;
-  margin: auto;
+  height: 40px;
+  h1 {
+    font-weight: bold;
+    font-size: 36px;
+  }
+`;
+
+const InputBox = styled.div`
+text-align: center;
+ margin-top: 30px;
+  width: 480px;
+   height: 370px;
   box-sizing: border-box;
+  
+  text-align: center;
+  input {
+  border:none;
+  padding-left:15px;
+  width: 460px;
+   height: 60px;
+    color: #111111;
+    background: #f4f4f4
+  font-weight: medium ;
+    font-size: 20px;
+  
+  }
+   input:nth-child(2) {
+      margin-bottom: 10px;}
+
+}
 `;
 
 const IdFind = styled.div`
   float: left;
-  width: 100px;
-  margin-left: 100px;
-  box-sizing: border-box;
+  margin: 12px 50px 12px 100px;
+  width: 90px;
+  height: 16px;
+  display: flex;
 
   a {
     text-decoration: none;
   }
   h6 {
+    font-weight: regular;
     font-size: 16px;
-    padding: 0px;
     color: #111111;
   }
 `;
 const PwFind = styled.div`
+  margin: 12px 100px 12px 30px;
   float: right;
-  width: 100px;
-  margin-right: 100px;
-  box-sizing: border-box;
+  width: 110px;
+  height: 16px;
+  display: flex;
   a {
     text-decoration: none;
   }
   h6 {
-    padding: 0px;
+    font-weight: regular;
     font-size: 16px;
     color: #111111;
   }
 `;
 const LoginButton = styled.div`
-  width: 460px;
-  margin: auto;
-  box-sizing: border-box;
-  button {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-
-    font-size: 26px;
-    width: 400px;
-    height: 65px;
-
-    color: #111111;
+ float: left;
+margin-top:12px;
+margin-left:10px;
+margin-bottom:30px;
+display: flex;
+align-items: center;
+  justify-content: center;
+width: 460px;
+  height: 60px;
+    background:#111111 ;
+     color: #ffffff;
+      font-weight: medium ;
+    font-size: 20px;
   }
 `;
 const SignupButton = styled.div`
-  width: 460px;
-  margin: auto;
-  box-sizing: border-box;
-  width: 400px;
-  height: 65px;
-  button {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-
-    font-size: 18px;
-    width: 400px;
-    height: 65px;
-
-    color: #111111;
+ float: left;
+margin-left:10px;
+margin-bottom:30px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 460px;
+  height: 60px;
+    background:#111111 ;
+     color: #ffffff;
+      font-weight: medium ;
+    font-size: 20px;
   }
 `;
 
-const LoginSectionC = styled.div`
-  width: 460px;
-  margin: 0 auto;
-  box-sizing: border-box;
-`;
 function SignIn() {
   return (
     <LoginContainer>
-      <LoginSectionA>
+      <LoginSection>
         <img src={logo} />
-      </LoginSectionA>
-      <LoginSectionB>
-        <LoginInput>
+        <LoginTitle>
+          <h1>로그인</h1>
+        </LoginTitle>
+
+        <InputBox>
           <input type="text" placeholder="아이디"></input>
           <input type="password" placeholder="비밀번호"></input>
-        </LoginInput>
-        <FindBox>
           <IdFind>
             <Link to="/findId">
               <h6>아이디찾기</h6>
@@ -157,19 +151,10 @@ function SignIn() {
               <h6>비밀번호찾기 </h6>
             </Link>
           </PwFind>
-        </FindBox>
-        <LoginButton>
-          <Link>
-            <button> - 로그인 -</button>
-          </Link>
-        </LoginButton>
-        <SignupButton>
-          <Link to="/signup">
-            <button> - 회원가입 -</button>
-          </Link>
-        </SignupButton>
-      </LoginSectionB>
-      <LoginSectionC></LoginSectionC>
+          <LoginButton to="/signIn">로그인</LoginButton>
+          <SignupButton to="/signup">회원가입</SignupButton>
+        </InputBox>
+      </LoginSection>
     </LoginContainer>
   );
 }
