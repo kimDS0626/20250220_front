@@ -65,7 +65,7 @@ function Router() {
 
         <Route path="/mypage" element={<MyPage />}></Route>
 
-        <Route path="/admihome" element={<AdminHome />}></Route>
+        <Route path="/adminhome" element={<AdminHome />}></Route>
       </Routes>
 
       <Footer />
