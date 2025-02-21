@@ -1,6 +1,24 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+
+function AdminCounselAnswer() {
+  return (
+    <NoticeContainer>
+      <NoticeSection>
+        <div>
+          <label>내용</label>
+          <textarea rows="3" name="content"></textarea>
+        </div>
+      </NoticeSection>
+      <WriteBox>
+        <WriteButton to="/NoticeUpdate">수정</WriteButton>
+        <WriteButton>삭제</WriteButton>
+      </WriteBox>
+    </NoticeContainer>
+  );
+}
+
 const NoticeContainer = styled.div`
   margin: auto;
   display: block;
@@ -44,21 +62,5 @@ const WriteButton = styled(Link)`
     background-color: #218838;
   }
 `;
-function AdminCounselAnswer() {
-  return (
-    <NoticeContainer>
-      <NoticeSection>
-        <div>
-          <label>내용</label>
-          <textarea rows="3" name="content"></textarea>
-        </div>
-      </NoticeSection>
-      <WriteBox>
-        <WriteButton to="/NoticeUpdate">수정</WriteButton>
-        <WriteButton>삭제</WriteButton>
-      </WriteBox>
-    </NoticeContainer>
-  );
-}
 
 export default AdminCounselAnswer;
