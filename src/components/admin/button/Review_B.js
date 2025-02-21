@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+
+function Review_B() {
+  return (
+    <NoticeContainer>
+      <WriteBox>
+        <WriteButton to="/NoticeUpdate">수정</WriteButton>
+        <WriteButton>삭제</WriteButton>
+      </WriteBox>
+    </NoticeContainer>
+  );
+}
 const NoticeContainer = styled.div`
   margin: auto;
   display: block;
@@ -29,15 +40,4 @@ const WriteButton = styled(Link)`
     background-color: #218838;
   }
 `;
-function Review_B() {
-  return (
-    <NoticeContainer>
-      <WriteBox>
-        <WriteButton to="/NoticeUpdate">수정</WriteButton>
-        <WriteButton>삭제</WriteButton>
-      </WriteBox>
-    </NoticeContainer>
-  );
-}
-
 export default Review_B;

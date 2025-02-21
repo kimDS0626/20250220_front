@@ -54,7 +54,6 @@ function NoticeTable() {
     { id: 6, title: "제목", date: "2025-02-20", views: 11 },
     { id: 7, title: "제목", date: "2025-02-20", views: 10 },
     { id: 8, title: "제목", date: "2025-02-20", views: 10 },
-
   ];
   const addEmptyRows = (data) => {
     const rowsWithEmpty = [];
