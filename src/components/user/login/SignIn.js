@@ -1,8 +1,104 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, axios, AuthContext } from "react";
+import { useContext, HttpHeadersContext } from "react";
+import { useNavigate } from "react-router";
+
 import { Link } from "react-router";
 import styled from "styled-components";
 
 import logo from "./imgs/logo_b.png";
+
+function SignIn() {
+  // const { auth, setAuth } = useContext(AuthContext);
+  // const { headers, setHeaders } = useContext(HttpHeadersContext);
+
+  // const navigate = useNavigate();
+
+  // const [id, setId] = useState("");
+  // const [pwd, setPwd] = useState("");
+
+  // const changeId = (event) => {
+  //   setId(event.target.value);
+  // };
+
+  // const changePwd = (event) => {
+  //   setPwd(event.target.value);
+  // };
+
+  // const login = async () => {
+  //   const req = {
+  //     email: id,
+  //     password: pwd,
+  //   };
+
+  //   await axios
+  //     .post("", req) // 위치입력 ex) http://localhost:8989/user/login
+  //     .then((resp) => {
+  //       // 성공 시
+  //       console.log("Login OK");
+  //       console.log(resp.data);
+
+  //       alert(resp.data.email + "님, 성공적으로 로그인 되었습니다요");
+
+  //       // JWT 토큰 저장 ex)bbs_access_token
+  //       localStorage.setItem("토큰토큰", resp.data.token);
+  //       localStorage.setItem("id", resp.data.email);
+
+  //       setAuth(resp.data.email);
+  //       setHeaders({ Authorization: `Bearer ${resp.data.token}` }); // HttpHeadersContext에 Authorization 헤더 저장
+
+  //       navigate("/");
+  //     })
+  //     .catch((err) => {
+  //       console.log("Login nono");
+  //       console.log(err);
+
+  //       alert("로그인 실패! " + err.response.data);
+  //     });
+  // };
+
+  return (
+    <LoginContainer>
+      <LoginSection>
+        <img src={logo} />
+        <LoginTitle>
+          <h1>로그인</h1>
+        </LoginTitle>
+
+        <InputBox>
+          <input
+            type="text"
+            placeholder="아이디"
+            // value={id}
+            // onChange={changeId}
+          ></input>
+          <input
+            type="password"
+            placeholder="비밀번호"
+            // value={pwd}
+            // onChange={changePwd}
+          ></input>
+          <IdFind>
+            <Link to="/findId">
+              <h6>아이디찾기</h6>
+            </Link>
+          </IdFind>
+          <PwFind>
+            <Link to="/findWd">
+              <h6>비밀번호찾기 </h6>
+            </Link>
+          </PwFind>
+          <LoginButton>
+            {/* onClick={login} */}
+            <Link>로그인</Link>
+          </LoginButton>
+          <SignupButton>
+            <Link to="/signup">회원가입</Link>
+          </SignupButton>
+        </InputBox>
+      </LoginSection>
+    </LoginContainer>
+  );
+}
 
 const LoginContainer = styled.div`
   width: 1920px;
@@ -136,39 +232,5 @@ width: 460px;
     color: #ffffff;
     }
 `;
-
-function SignIn() {
-  return (
-    <LoginContainer>
-      <LoginSection>
-        <img src={logo} />
-        <LoginTitle>
-          <h1>로그인</h1>
-        </LoginTitle>
-
-        <InputBox>
-          <input type="text" placeholder="아이디"></input>
-          <input type="password" placeholder="비밀번호"></input>
-          <IdFind>
-            <Link to="/findId">
-              <h6>아이디찾기</h6>
-            </Link>
-          </IdFind>
-          <PwFind>
-            <Link to="/findWd">
-              <h6>비밀번호찾기 </h6>
-            </Link>
-          </PwFind>
-          <LoginButton>
-            <Link to="">로그인</Link>
-          </LoginButton>
-          <SignupButton>
-            <Link to="/signup">회원가입</Link>
-          </SignupButton>
-        </InputBox>
-      </LoginSection>
-    </LoginContainer>
-  );
-}
 
 export default SignIn;
