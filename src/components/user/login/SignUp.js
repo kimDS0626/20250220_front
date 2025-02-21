@@ -2,58 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const SignupContainer = styled.div`
-  display: block;
-  width: 100%;
-  height: 1000px;
-`;
-
-const SignupSectionA = styled.div`
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-
-  width: 400px;
-  height: 100px;
-  background-color: #f4f4f4;
-`;
-
-const SignupTitle = styled.div`
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-
-  width: 400px;
-  height: 100px;
-  background-color: #f4f4f4;
-`;
-const SignupSectionB = styled.div`
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-
-  width: 400px;
-  height: 300px;
-  background-color: #f4f4f4;
-`;
-const SignupSectionC = styled.div`
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-
-  width: 400px;
-  height: 300px;
-  background-color: #f4f4f4;
-`;
-const SignupSectionD = styled.div`
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-
-  width: 400px;
-  height: 100px;
-  background-color: #f4f4f4;
-`;
 function SignUp() {
   return (
     <SignupContainer>
@@ -171,5 +119,58 @@ function SignUp() {
     </SignupContainer>
   );
 }
+
+const SignupContainer = styled.div`
+  display: block;
+  width: 100%;
+  height: 1000px;
+`;
+
+const SignupSectionA = styled.div`
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+
+  width: 400px;
+  height: 100px;
+  background-color: #f4f4f4;
+`;
+
+const SignupTitle = styled.div`
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+
+  width: 400px;
+  height: 100px;
+  background-color: #f4f4f4;
+`;
+const SignupSectionB = styled.div`
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+
+  width: 400px;
+  height: 300px;
+  background-color: #f4f4f4;
+`;
+const SignupSectionC = styled.div`
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+
+  width: 400px;
+  height: 300px;
+  background-color: #f4f4f4;
+`;
+const SignupSectionD = styled.div`
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+
+  width: 400px;
+  height: 100px;
+  background-color: #f4f4f4;
+`;
 
 export default SignUp;

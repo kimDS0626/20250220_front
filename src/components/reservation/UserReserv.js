@@ -5,85 +5,6 @@ import "react-calendar/dist/Calendar.css";
 import styled from "styled-components";
 import Timeslot from "./Timeslot";
 
-// 전체 컨테이너
-const Container = styled.div`
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-// 내부 콘텐츠 (최대 1280px)
-const ContentWrapper = styled.div`
-  width: 100%;
-  max-width: 1280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-`;
-
-// 제목 섹션
-const Title = styled.div`
-  margin-top: 100px;
-  width: 100%;
-  text-align: left;
-`;
-// 진료과목 박스
-const DepartmentBo = styled.div`
-  
-`
-// 캘린더 박스
-const CalendarBox = styled.div`
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-`;
-
-// 캘린더 스타일
-const StyledCalendar = styled(Calendar)`
-  border: 1px solid black;
-  width: 60%;
-  height: 400px;
-  border-radius: 15px;
-`;
-
-// 예약 시간 박스
-const TimeBox = styled.div`
-  display: flex;
-  width: 100%;
-  max-width: 1280px;
-  border: 1px solid black;
-  border-radius: 15px;
-  margin: 20px 0;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-`;
-
-// 반려동물 정보 박스
-const AnimalBox = styled.div`
-  border: 1px solid black;
-  width: 100%;
-  max-width: 1280px; /* 📌 테이블이 1280px을 넘지 않도록 설정 */
-  border-radius: 15px;
-  margin-bottom: 20px;
-  padding: 10px;
-`;
-
-// 반려동물 정보 테이블
-const AnimalTable = styled.table`
-  width: 100%;
-  max-width: 1280px; /* 📌 테이블 크기를 1280px로 설정 */
-  border: 1px solid black;
-  border-radius: 15px;
-  margin: 20px 0;
-  text-align: center;
-`;
-
 function UserReserv() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [timeSlots, setTimeSlots] = useState([]); // 백엔드에서 받아올 타임슬롯 데이터
@@ -118,7 +39,6 @@ function UserReserv() {
         <Title>
           <h1>회원 예약</h1>
         </Title>
-        
 
         <CalendarBox>
           <StyledCalendar
@@ -172,5 +92,82 @@ function UserReserv() {
     </Container>
   );
 }
+
+// 전체 컨테이너
+const Container = styled.div`
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+// 내부 콘텐츠 (최대 1280px)
+const ContentWrapper = styled.div`
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+`;
+
+// 제목 섹션
+const Title = styled.div`
+  margin-top: 100px;
+  width: 100%;
+  text-align: left;
+`;
+// 진료과목 박스
+const DepartmentBo = styled.div``;
+// 캘린더 박스
+const CalendarBox = styled.div`
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+`;
+
+// 캘린더 스타일
+const StyledCalendar = styled(Calendar)`
+  border: 1px solid black;
+  width: 60%;
+  height: 400px;
+  border-radius: 15px;
+`;
+
+// 예약 시간 박스
+const TimeBox = styled.div`
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 20px 0;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+`;
+
+// 반려동물 정보 박스
+const AnimalBox = styled.div`
+  border: 1px solid black;
+  width: 100%;
+  max-width: 1280px; /* 📌 테이블이 1280px을 넘지 않도록 설정 */
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
+`;
+
+// 반려동물 정보 테이블
+const AnimalTable = styled.table`
+  width: 100%;
+  max-width: 1280px; /* 📌 테이블 크기를 1280px로 설정 */
+  border: 1px solid black;
+  border-radius: 15px;
+  margin: 20px 0;
+  text-align: center;
+`;
 
 export default UserReserv;
